@@ -1217,12 +1217,11 @@ img {
     flex-wrap: nowrap;
   }
   .portfolio-item {
-    gap: 48px 24px ;
+    gap: 48px 24px;
     align-items: center;
   }
   .portfolio-list-title {
     width: 356px;
-    
   }
   .img-portfolio {
     width: 356px;
