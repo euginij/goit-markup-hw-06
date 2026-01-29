@@ -31,12 +31,6 @@ img {
   padding-right: 16px;
 }
 .visually-hidden {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
   position: absolute;
   width: 1px;
   height: 1px;
@@ -47,9 +41,6 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
 }
 .header-studio {
   display: flex;
@@ -204,6 +195,7 @@ img {
   padding-bottom: 72px;
 }
 .team-presentation {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 72px;
@@ -280,10 +272,11 @@ img {
   gap: 72px 24px;
 }
 .portfolio-list-title {
-  width: 264px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow;
+  width: 288px;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .img-overflow {
   position: relative;
@@ -292,16 +285,7 @@ img {
 .img-portfolio {
   width: 264px;
 }
-.portfolio-list-title:hover,
-.portfolio-list-title:focus {
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: box-shadow;
-}
+
 .portfolio-list-title:hover .overlay-text,
 .portfolio-list-title:focus .overlay-text {
   transform: translateY(0);
@@ -537,7 +521,7 @@ img {
   position: relative;
   width: 288px;
   height: 623px;
-  padding: 16px;
+  padding: 72px 16px 24px 16px;
   text-align: right;
 }
 
@@ -585,7 +569,6 @@ img {
   text-align: center;
   color: #2d2e41;
   margin-bottom: 16px;
-  margin-top: 56px;
 }
 .modal-form {
   text-align: left;
@@ -679,27 +662,7 @@ img {
   display: flex;
   gap: 8px;
 }
-.visually-hidden {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
-}
+
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -723,7 +686,21 @@ img {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
 }
-
+.visually-hidden:checked + .checkbox-label .modal-submit-icon {
+  opacity: 1;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity;
+}
+.visually-hidden:checked + .checkbox-label .checkbox-custom {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, fill;
+}
 .modal-submit-icon {
   fill: white;
   opacity: 0;
@@ -875,6 +852,7 @@ img {
 .contacts-email {
   display: inline-block;
   padding-top: 12px;
+  padding-bottom: 12px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -889,6 +867,7 @@ img {
 .contacts-number {
   display: inline-block;
   padding-top: 12px;
+  padding-bottom: 12px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -902,7 +881,7 @@ img {
 
 .mobile-icon-container {
   display: flex;
-  margin-top: 48px;
+  margin-top: 36px;
   gap: 40px;
 }
 
@@ -1080,6 +1059,10 @@ img {
     flex-direction: row;
   }
   .portfolio-list-title {
+    box-shadow:
+      0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16),
+      0 1px 6px 0 rgba(46, 47, 66, 0.08);
     width: 356px;
   }
   .futer-fone {
@@ -1105,6 +1088,7 @@ img {
     flex-direction: row;
   }
   .input-container {
+    gap: 24px;
     flex-direction: row;
   }
   .social-container-item {
@@ -1114,18 +1098,14 @@ img {
   .modal {
     width: 408px;
     height: 584px;
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
   }
-  .modal-back-button {
-    position: static;
-  }
+
   .modal-input {
     width: 360px;
     height: 40px;
   }
-  .modal-title {
-    margin-top: 24px;
-  }
+
   .modal-textarea {
     width: 360px;
     height: 120px;
@@ -1220,8 +1200,25 @@ img {
     gap: 48px 24px;
     align-items: center;
   }
+  .portfolio-container-list {
+    padding: 32px 16px;
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+  }
   .portfolio-list-title {
+     box-shadow: none;
     width: 356px;
+  }
+  .portfolio-list-title:hover,
+  .portfolio-list-title:focus {
+    box-shadow:
+      0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16),
+      0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow;
   }
   .img-portfolio {
     width: 356px;
