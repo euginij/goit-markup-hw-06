@@ -1197,6 +1197,7 @@ img {
     text-align: left;
   }
   .features-icon-container {
+    display: flex;
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
