@@ -54,7 +54,8 @@ img {
 }
 .header-container {
   display: flex;
-  gap: 169px;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
 }
 .webstudio-logo {
@@ -926,11 +927,7 @@ img {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .header-container {
-    justify-content: space-between;
-    gap: 0;
-    width: 100%;
-  }
+  
   .navigation-list-container {
     opacity: 1;
     position: static;
@@ -1151,11 +1148,7 @@ img {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .header-container {
-    display: flex;
-    gap: 332px;
-    align-items: center;
-  }
+  
   .navigation-container {
     gap: 76px;
   }
