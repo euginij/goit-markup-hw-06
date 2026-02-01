@@ -54,7 +54,7 @@ img {
 }
 .header-container {
   display: flex;
-  gap: 149px;
+  gap: 169px;
   align-items: center;
 }
 .webstudio-logo {
@@ -98,7 +98,7 @@ img {
   background-color: #2e2f42;
   padding-bottom: 72px;
   padding-top: 72px;
-  max-width: 320px;
+
   margin: 0 auto;
   background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -151,7 +151,7 @@ img {
   gap: 72px;
 }
 .features-list-title {
-  text-align: left;
+  text-align: center;
 }
 .features-icon-container {
   display: flex;
@@ -540,7 +540,6 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
-  border: 1px;
 }
 .modal-icon {
   fill: #2e2f42;
@@ -748,7 +747,13 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 }
-
+.modal-submit-button:hover,
+.modal-submit-button:focus {
+  background: #404bbf;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+}
 .menu-mobile {
   background-color: #fff;
   position: fixed;
@@ -790,11 +795,10 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
-  border: 1px;
   margin-bottom: 4px;
 }
-.modal-back-button:hover .modal-icon,
-.modal-back-button:focus .modal-icon {
+.mobile-back-button:hover .modal-icon,
+.mobile-back-button:focus .modal-icon {
   fill: #fff;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -923,7 +927,9 @@ img {
     padding-right: 16px;
   }
   .header-container {
-    gap: 120px;
+    justify-content: space-between;
+    gap: 0;
+    width: 100%;
   }
   .navigation-list-container {
     opacity: 1;
@@ -935,7 +941,7 @@ img {
   .navigation-container {
     display: flex;
     align-items: center;
-    gap: 76px;
+    gap: 120px;
   }
   .navigation-list {
     display: flex;
@@ -1004,7 +1010,7 @@ img {
     visibility: visible;
     pointer-events: auto;
   }
-  .navigation-adres {
+  .navigation-adres { 
     display: block;
   }
 
@@ -1038,13 +1044,13 @@ img {
   .effective-solutions {
     padding-top: 112px;
     padding-bottom: 112px;
-    max-width: 768px;
   }
   .efective-solutions-titles {
     margin-bottom: 36px;
     max-width: 496px;
   }
   .features-list-title {
+    width: 356px;
     text-align: left;
   }
   .features-item {
@@ -1053,9 +1059,7 @@ img {
 
     gap: 72px 24px;
   }
-  .features-list-title {
-    width: 356px;
-  }
+
   .features-icon-container {
     display: none;
     opacity: 0;
@@ -1174,7 +1178,6 @@ img {
   .effective-solutions {
     padding-top: 188px;
     padding-bottom: 188px;
-    max-width: 1440px;
   }
   .efective-solutions-titles {
     color: #ffffff;
@@ -1191,7 +1194,7 @@ img {
     gap: 24px;
   }
   .features-list-title {
-    text-align: center;
+    text-align: left;
     width: 264px;
   }
 
